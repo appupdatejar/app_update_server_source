@@ -10,6 +10,15 @@ public class UpdateResponseBean implements Serializable {
     private int isUpdate;
     private String url;
     private long filesize;
+    private int canNotShowDialog;   //0:canNotCancel 1:canCancel
+
+    public void setCanNotShowDialog(int canNotShowDialog) {
+        this.canNotShowDialog = canNotShowDialog;
+    }
+
+    public int getCanNotShowDialog() {
+        return canNotShowDialog;
+    }
 
     public void setIsUpdate(int isUpdate) {
         this.isUpdate = isUpdate;

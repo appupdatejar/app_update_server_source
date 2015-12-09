@@ -10,6 +10,15 @@ public class UpdateConfigBean implements Serializable {
     private String version;
     private String packagename;
     private String path;
+    private int canNotShowDialog;   //0:canNotCancel 1:canCancel
+
+    public void setCanNotShowDialog(int canNotShowDialog) {
+        this.canNotShowDialog = canNotShowDialog;
+    }
+
+    public int getCanNotShowDialog() {
+        return canNotShowDialog;
+    }
 
     public void setVersion(String version) {
         this.version = version;

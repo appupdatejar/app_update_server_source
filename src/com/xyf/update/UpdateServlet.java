@@ -61,6 +61,7 @@ public class UpdateServlet extends HttpServlet {
             responseBean.setIsUpdate(1);
             responseBean.setFilesize(apkFile.length());
             responseBean.setUrl("http://192.168.0.77:8080/" + configBean.getPath());
+            responseBean.setCanNotShowDialog(configBean.getCanNotShowDialog());
 
             respContent = JsonUtils.parseObj2String(responseBean);
 
@@ -80,6 +81,7 @@ public class UpdateServlet extends HttpServlet {
         responseBean.setIsUpdate(0);
         responseBean.setFilesize(0);
         responseBean.setUrl("");
+        responseBean.setCanNotShowDialog(1);
 
         respContent = JsonUtils.parseObj2String(responseBean);
 
